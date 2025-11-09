@@ -4,8 +4,8 @@
 
 AlignSurvey is a benchmark and toolkit for using LLMs in social surveys. AlignSurvey defines four tasks: social role modeling, semi-structured interviews, attitude stance, and survey response.
 
-[📊 Datasets](https://huggingface.co/datasets/PiLab-ZJU/AlignSurvey) |
-[🤖 Models](https://huggingface.co/PiLab-ZJU/AlignSurvey) |
+[📊 Datasets](https://huggingface.co/PiLabZJU) |
+[🤖 Models](https://huggingface.co/PiLabZJU) |
 [📄 Paper] |
 [📑 Full version]()
 
