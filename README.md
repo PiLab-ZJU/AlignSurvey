@@ -11,6 +11,9 @@ AlignSurvey is a benchmark and toolkit for using LLMs in social surveys. AlignSu
 
 This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory). We gratefully acknowledge its maintainers and contributors for the codebase, documentation and tooling.
 
+![Overview](images/aaai-benchmark.jpg)
+
+
 ## Datasets
 
 ### Structure and directories
