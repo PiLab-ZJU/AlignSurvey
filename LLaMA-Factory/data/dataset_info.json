@@ -1,0 +1,110 @@
+{
+  "train_base": {
+    "file_name": "../../data/all.json"
+  },
+  "train_ase": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/individual/ase_train.json"
+  },
+  "test_ase": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/individual/ase_test.json"
+  },
+  "train_ase_group": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/group/ase_train_group.json"
+  },
+  "test_ase_group": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/group/ase_test_group.json"
+  },
+
+  "train_attitude": {
+    "file_name": "../../data/enitre_pipeline/task3/individual/train_attitude.json"
+  },
+  "test_attitude": {
+    "file_name": "../../data/enitre_pipeline/task3/individual/test_attitude.json"
+  },
+  "train_attitude_group": {
+    "file_name": "../../data/enitre_pipeline/task3/group/train_attitude_group.json"
+  },
+  "test_attitude_group": {
+    "file_name": "../../data/enitre_pipeline/task3/group/test_attitude_group.json"
+  },
+
+  "train_dialogue": {
+    "file_name": "../../data/enitre_pipeline/task2/dialogue_train.json"
+  },
+  "test_dialogue": {
+    "file_name": "../../data/enitre_pipeline/task2/dialogue_test.json"
+  },
+
+  "train_性别": {
+    "file_name": "../../data/enitre_pipeline/task1/train_性别.json"
+  },
+  "test_性别": {
+    "file_name": "../../data/enitre_pipeline/task1/test_性别.json"
+  },
+  "train_年龄": {
+    "file_name": "../../data/enitre_pipeline/task1/train_年龄.json"
+  },
+  "test_年龄": {
+    "file_name": "../../data/enitre_pipeline/task1/test_年龄.json"
+  },
+  "train_户籍状态": {
+    "file_name": "../../data/enitre_pipeline/task1/train_户籍状态.json"
+  },
+  "test_户籍状态": {
+    "file_name": "../../data/enitre_pipeline/task1/test_户籍状态.json"
+  },
+  "train_职业类型": {
+    "file_name": "../../data/enitre_pipeline/task1/train_职业类型.json"
+  },
+  "test_职业类型": {
+    "file_name": "../../data/enitre_pipeline/task1/test_职业类型.json"
+  },
+  "train_最高教育程度": {
+    "file_name": "../../data/enitre_pipeline/task1/train_最高教育程度.json"
+  },
+  "test_最高教育程度": {
+    "file_name": "../../data/enitre_pipeline/task1/test_最高教育程度.json"
+  },
+  "train_家里人口数": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家里人口数.json"
+  },
+  "test_家里人口数": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家里人口数.json"
+  },
+  "train_家庭成员关系": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家庭成员关系.json"
+  },
+  "test_家庭成员关系": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家庭成员关系.json"
+  },
+  "train_有房": {
+    "file_name": "../../data/enitre_pipeline/task1/train_有房.json"
+  },
+  "test_有房": {
+    "file_name": "../../data/enitre_pipeline/task1/test_有房.json"
+  },
+  "train_有车": {
+    "file_name": "../../data/enitre_pipeline/task1/train_有车.json"
+  },
+  "test_有车": {
+    "file_name": "../../data/enitre_pipeline/task1/test_有车.json"
+  },
+  "train_家庭年收入": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家庭年收入.json"
+  },
+  "test_家庭年收入": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家庭年收入.json"
+  },
+  "train_家庭月消费主要支出项目": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家庭月消费主要支出项目.json"
+  },
+  "test_家庭月消费主要支出项目": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家庭月消费主要支出项目.json"
+  },
+  "train_生活压力程度": {
+    "file_name": "../../data/enitre_pipeline/task1/train_生活压力程度.json"
+  },
+  "test_生活压力程度": {
+    "file_name": "../../data/enitre_pipeline/task1/test_生活压力程度.json"
+  }
+}
