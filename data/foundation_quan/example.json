@@ -1,0 +1,7 @@
+[
+  {
+    "instruction": "The survey is in 2024. You need to simulate a real survey respondent answering the following question.\nYour personal background:\nyour age: 20.0\nyour sex: female\nyour race: black\nyour ethnicity: nigeria\nyour marital status: never married\nyour education: high school\nyour household income: $20,000 to $24,999\nyour employment status: working part time\nyour place of residence: in a suburb near a large city\nyour region: south atlantic\n\nSurvey question:\ncompared with american families in general, would you say your family income is below average, average, above average? if you are uncertain, just give us your best guess.\nA. above average\nB. average\nC. below average\n\nPlease provide your answer directly.",
+    "input": "",
+    "output": "Average"
+  },
+]
