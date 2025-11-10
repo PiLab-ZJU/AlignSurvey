@@ -13,6 +13,21 @@ This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Fact
 
 ![Overview](images/aaai-benchmark.jpg)
 
+## Directory Layout (core)
+```text
+data/
+  foundation_qual/      # qualitative interview data
+  foundation_quan/      # quantitative questionnaire data
+  enitre_pipeline/      # four-task evaluation datasets
+
+LLaMA-Factory/
+  data/
+    dataset_info.json   # update your dataset
+  run/
+    train/              # training scripts
+    test/               # inference scripts
+  generate/             # evaluation scripts
+```
 
 ## Datasets
 
@@ -28,12 +43,18 @@ This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Fact
 - **Please follow each source’s usage statements and licenses**.
 - We release processed derivatives only; raw/original data should be obtained from the providers. Processed datasets are also available on [Datasets](https://huggingface.co/datasets/PiLab-ZJU/AlignSurvey) and continuously expanded with additional processed data.
 
-### Usage and compliance
-- Academic, non-commercial use only; do not attempt to re-identify individuals.
-- Cite both this project and the original data sources; comply with the original licenses.
-- We support fair and inclusive research; explicitly consider marginalized and intersectional groups in study design and interpretation.
+### Custom dataset
+We encourage you to build task‑specific datasets tailored to your own social science research questions. All data are stored and processed locally, so you do not need to address privacy constraints for this workflow. Please convert your data to the required format, save it under your data directory, and update both `data_info.json` and the run scripts under `run/` to point to your files.
 
-### Data format example
+#### Required dataset format
+- File type: JSON.
+- Schema: Alpaca-style fields are expected by the trainer.
+  - instruction: the full prompt shown to the model (you can embed demographics, question, and options here).
+  - input: keep "" if unused.
+  - output: the target response (e.g., "C. middle class" or just "C").
+- Optional metadata fields (kept but not required by training): respondent_id, question_index, question, answer, choices, etc.
+
+Example item (compatible with your current data):
 ```json
 [
   {
@@ -48,10 +69,58 @@ This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Fact
 ]
 ```
 
+#### Where to place your files
+- Put your JSON files under your chosen data directory, for example:
+  ../../data/enitre_pipeline/task4/your_data/individual/your_train.json
+
+#### Update data_info.json
+- Add an entry pointing to your dataset file. Since your trainer expects Alpaca-style fields, explicitly mark the formatting as alpaca.
+Example:
+```json
+{
+  "your_key": {
+    "file_name": "../../data/enitre_pipeline/task4/your_data/individual/your_train.json",
+  }
+}
+```
+
+#### Update run/base.sh
+- Ensure the dataset variable matches the key in data_info.json, and paths are correct. Keep your current key train_ase: dataset="your_key"
+
+
+### Usage and compliance
+- Academic, non-commercial use only; do not attempt to re-identify individuals.
+- Cite both this project and the original data sources; comply with the original licenses.
+- We support fair and inclusive research; explicitly consider marginalized and intersectional groups in study design and interpretation.
+
+
 ## Models
+
+### Already integrated
 - SurveyLM-Llama-3.1-8B (based on Meta-Llama-3.1-8B-Instruct)
-- SurveyLM-Qwen2.5-7B (based onQwen2.5-7B-Instruct)
-- SurveyLM-Mistral-7B (based onMistral-7B-Instruct-v0.3)
+- SurveyLM-Qwen2.5-7B (based on Qwen2.5-7B-Instruct)
+- SurveyLM-Mistral-7B (based on Mistral-7B-Instruct-v0.3)
+
+### Other compatible models
+- For available models and their corresponding templates, see: [supported-models](https://github.com/hiyouga/LLaMA-Factory?tab=readme-ov-file#supported-models)
+  
+How to add a new model
+1) Download the model locally and note its path.
+2) Add the model to the models array and choose the matching chat template.
+
+Example: extend models in `base.sh`
+```
+declare -A models=(
+    ["Meta-Llama-3.1-8B-Instruct"]="/mnt/nvme1/hf-model/Meta-Llama-3.1-8B-Instruct"
+    # Additions:
+    ["Qwen2.5-14B-Instruct"]="/mnt/nvme1/hf-model/Qwen2.5-14B-Instruct"
+)
+```
+
+### API usage
+
+Replace `run/api` YOUR_API_KEY with your own key. If you serve your fine‑tuned model via an OpenAI‑compatible endpoint, set the base URL to your server.
+
 
 ## Usage Guide
 
@@ -84,24 +153,8 @@ This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Fact
   ```
 - Evaluation:
   ```bash
-  python LLaMA-Factory/generate/task1/acc_result.py
+  python LLaMA-Factory/generate/task1/result.py
   ```
-
-## Directory Layout (core)
-```text
-data/
-  foundation_qual/      # qualitative interview data
-  foundation_quan/      # quantitative questionnaire data
-  enitre_pipeline/      # four-task evaluation datasets
-
-LLaMA-Factory/
-  data/
-    dataset_info.json
-  run/
-    train/              # training scripts (e.g., task1.sh)
-    test/               # inference/generation scripts (e.g., task1.sh)
-  generate/             # evaluation and report scripts (e.g., eval_task1.sh)
-```
 
 ## Citation
 ```bibtex
