@@ -4,7 +4,7 @@
 
 AlignSurvey is a benchmark and toolkit for using LLMs in social surveys. AlignSurvey defines four tasks: social role modeling, semi-structured interviews, attitude stance, and survey response.
 
-[📊 Datasets](https://huggingface.co/PiLabZJU) |
+[📊 Datasets](https://huggingface.co/datasets/PiLabZJU/AlignSurvey_Datasets) |
 [🤖 Models](https://huggingface.co/PiLabZJU) |
 [📄 Paper] |
 [📑 Full version]()
@@ -45,7 +45,7 @@ LLaMA-Factory/
 ### Sources
 - [CGSS](http://cgss.ruc.edu.cn), [CSS](http://csqr.cass.cn/page/announcements/detail/61e122ec9f1fef6cdcfb951b), [ATP](https://ropercenter.cornell.edu/pew-research-center), [ESS](https://www.europeansocialsurvey.org), [GSS](https://gss.norc.org), [CHIP](https://bs.bnu.edu.cn/zgjmsrfpdcsjk/sjsq/index.html).
 - **Please follow each source’s usage statements and licenses**.
-- We release processed derivatives only; raw/original data should be obtained from the providers. Processed datasets are also available on [Datasets](https://huggingface.co/datasets/PiLab-ZJU/AlignSurvey) and continuously expanded with additional processed data.
+- We release processed derivatives only; raw/original data should be obtained from the providers. Processed datasets are also available on [Datasets](https://huggingface.co/datasets/PiLabZJU/AlignSurvey_Datasets) and continuously expanded with additional processed data.
 
 ### Custom dataset
 We encourage you to build task‑specific datasets tailored to your own social science research questions. All data are stored and processed locally, so you do not need to address privacy constraints for this workflow. Please convert your data to the required format, save it under your data directory, and update both `data_info.json` and the run scripts under `run/` to point to your files.
