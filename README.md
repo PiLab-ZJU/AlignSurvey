@@ -13,7 +13,10 @@ This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Fact
 
 ![Overview](images/aaai-benchmark.jpg)
 
-## Directory Layout (core)
+## Directory Layout
+
+You only need to focus on the following documents：
+
 ```text
 data/
   foundation_qual/      # qualitative interview data
@@ -26,6 +29,7 @@ LLaMA-Factory/
   run/
     train/              # training scripts
     test/               # inference scripts
+    api/                # API call
   generate/             # evaluation scripts
 ```
 
