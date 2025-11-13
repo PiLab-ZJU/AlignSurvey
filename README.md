@@ -7,7 +7,7 @@ AlignSurvey is a benchmark and toolkit for using LLMs in social surveys. AlignSu
 [📊 Datasets](https://huggingface.co/datasets/PiLabZJU/AlignSurvey_Datasets) |
 [🤖 Models](https://huggingface.co/PiLabZJU) |
 [📄 Paper] |
-[📑 Full version](https://arxiv.org/abs/2511.07871)
+[📑 Full version](https://arxiv.org/abs/2511.07871) Continuously updated
 
 This project is powered by [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory). We gratefully acknowledge its maintainers and contributors for the codebase, documentation and tooling.
 
