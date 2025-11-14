@@ -162,6 +162,12 @@ Replace `run/api` YOUR_API_KEY with your own key. If you serve your fine‑tuned
 
 ## Citation
 ```bibtex
+@article{lin2025alignsurvey,
+  title={AlignSurvey: A Comprehensive Benchmark for Human Preferences Alignment in Social Surveys},
+  author={Lin, Chenxi and Yuan, Weikang and Jiang, Zhuoren and Huang, Biao and Zhang, Ruitao and Ge, Jianan and Xu, Yueqian and Yu, Jianxing},
+  journal={arXiv preprint arXiv:2511.07871},
+  year={2025}
+}
 ```
 
 ## Acknowledgments
